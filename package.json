@@ -6,8 +6,16 @@
 	"bin": {
 		"as3js": "./bin/as3jsc.js"
 	},
+	"scripts": {
+		"build": "./build.js",
+		"test": "npm run test-classes",
+		"test-classes": "mocha --sort --recursive test/classes",
+		"test-runtime": "mocha --sort --recursive test/runtime"
+	},
 	"devDependencies": {
-		"js-beautify": "1.5.10"
+		"chai": "3.5.0",
+		"js-beautify": "1.5.10",
+		"mocha": "3.2.0"
 	},
 	"main": "./index.js",
 	"repository": {
